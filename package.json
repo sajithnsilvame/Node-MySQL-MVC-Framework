@@ -1,0 +1,43 @@
+{
+  "name": "node-backend-mvc",
+  "version": "1.0.0",
+  "description": "node backend server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "make:controller": "node config/scripts/makeController.js",
+    "make:model": "node config/scripts/makeModel.js",
+    "make:controller:model": "node config/scripts/makeControllerModel.js",
+    "make:middleware": "node config/scripts/makeMiddleware.js",
+    "migrate": "npx sequelize-cli db:migrate --migrations-path=./database/migrations --config=./config/config.js",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo --migrations-path=./database/migrations --config=./config/config.js",
+    "seed": "npx sequelize-cli db:seed:all --seeders-path=./database/seeders --config=./config/config.js",
+    "make:seeder": "node config/scripts/createSeeder.js",
+    "seed:undo": "npx sequelize-cli db:seed:undo:all --seeders-path=./database/seeders --config=./config/config.js"
+  },
+  "keywords": [
+    "node",
+    "backend",
+    "api",
+    "express",
+    "mysql2"
+  ],
+  "author": "sajith n silva",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "mysql2": "^3.10.3",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "sequelize-cli": "^6.6.2",
+    "touch": "^3.1.0",
+    "make-dir": "^4.0.0",
+    "morgan": "^1.10.0"
+  }
+}

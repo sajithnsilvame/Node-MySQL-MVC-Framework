@@ -1,0 +1,7 @@
+#   make a controller =>    `npm run make:controller <Controller_Name>`
+#   make a model with migration file =>    `npm run make:model <Model_Name> -- -m`
+#   make a middleware =>    `npm run make:middleware <Middleware_Name>`
+#   make a controller with a model =>    `npm run make:controller:model <Controller_Name or Model_Name>`
+#   migrate the files to the MySQL DB =>    `npm run migrate`
+#   make a seeder file =>    `npm run make:seeder <Seeder_Name>`
+#   seed the database =>     `npm run seed`
